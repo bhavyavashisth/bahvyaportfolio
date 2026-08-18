@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavya Sharma — software engineer & cybersecurity researcher</title>
+    <meta name="description" content="Portfolio of Bhavya Sharma, 17-year-old software engineer and cybersecurity researcher from Jaipur, India." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+    <!--light/dark toggle -->
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">
+        <!-- sun in dark mode-->
+        <svg class="ico ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <!-- moon in light mode -->
+        <svg class="ico ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <main class="wrap">
+
+        <div class="avatar">
+            <img id="character" src="assets/img/character.gif" alt="character gif" />
+        </div>
+
+        <h1 class="name">Bhavya Sharma</h1>
+        <p class="sub">software engineer &amp; cybersecurity researcher</p>
+
+        <!-- about me section -->
+        <section class="about">
+            <p>
+                Hey, I am a 17-year-old aspiring software engineer and cybersecurity lover
+                with deep interest in systems programming, open source and everything
+                related to how technology works underneath. I love Rust, C, C++,
+                cybersecurity, systems, low-level programming and development tools. I
+                like playing with technologies and digging into how software works and
+                works with different things. Sometimes my interests lead me to really
+                deep technical rabbit holes.
+            </p>
+
+            <p>
+                In addition to programming, I like to play video games, watch anime, read
+                manga, listen to music and experiment with various pieces of technology. I
+                also happen to be the sort of person who spends much time on trying to
+                figure out why something is not working and cannot give it up. Right now,
+                I'm trying to learn, create projects, dig deeper into cybersecurity and
+                systems programming and try to figure out where could I go from here. I
+                mostly learn through experimentation and creation rather than tutorials.
+                I'm still at the beginning of my way, but there is much I would like to
+                discover. If you are interested in programming, cybersecurity, open
+                source, systems or any other tech-related things, I would probably find
+                our conversations enjoyable.
+            </p>
+        </section>
+
+        <!-- all the links -->
+        <nav class="links" aria-label="primary">
+            <a class="link" href="blog.html">blog</a>
+            <a class="link" href="press.html">press</a>
+            <a class="link" href="skills.html">skills</a>
+            <a class="link" href="cve.html">cve</a>
+            <a class="link" href="https://github.com/" target="_blank" rel="noopener">github</a>
+            <a class="link" href="https://twitter.com/" target="_blank" rel="noopener">twitter</a>
+            <a class="link" href="mailto:hello@bhavyasharma.dev">email</a>
+        </nav>
+
+        <!--location+ time--->
+        <p class="loc">
+            <span class="pin" aria-hidden="true"></span>
+            <span>Jaipur, India</span>
+            <span class="dot">·</span>
+            <span id="clock">--:-- -- IST</span>
+        </p>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
