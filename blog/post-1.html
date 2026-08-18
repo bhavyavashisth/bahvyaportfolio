@@ -34,45 +34,45 @@
 
         <article class="post-body">
             <p>
-                I’m writing this blog at night, I don’t even know where my terminal is, and I genuinely don’t know why the f*ck I’m doing this while I’m supposed to be solving maths questions.
+                I’m writing this blog at night 3:30 AM, I don’t even know where my terminal is, and I genuinely don’t know why the f*ck 
+                I’m doing this while I’m supposed to be solving maths questions.
             </p>
             <p>
                 But anyway, here we are.
                 </p>
-When I first started getting interested in cybersecurity, one of the first questions I had was:
+            When I first started getting interested in cybersecurity, 
+            one of the first questions I had was:
+            </p>
+<p><strong> “Which programming language should I learn?”</strong>
+            <p>
+                And honestly, Python seemed like the obvious answer.
+
+Everyone talks about Python in cybersecurity. It’s relatively easy to 
+learn, there are libraries for basically everything, and you can make
+ useful scripts without writing 500 lines of code just to make something work.
+            </p>
+            <p> So naturally, I thought:</p>
+            <p><strong> C → Python? </strong></p>
+
+            <p>
+                No.
+             I decided to do the slightly more painful thing.
+            C first.
+            </p>
+<h3 Why C? 
+            <p></p>
+               Not because I think C is somehow better than Python. It definitely isn’t better for
+                everything, and you absolutely do not need to learn C before Python to get into 
+                cybersecurity. I chose C because I wanted to understand what was actually happening
+                 underneath my code instead of immediately jumping to higher-level languages that hide a lot of those details from you.
             </p>
 
             <p>
-                First thing I tried was the obvious — run it, type the word "password",
-                watch it fail, then poke at the strings output. There was a
-                <code>strcmp</code> reference but the comparison string wasn't sitting in
-                <code>.rodata</code> like I expected, which was my first hint that
-                something was being built on the stack.
-            </p>
-
-            <p>
-                Disassembling the <code>main</code> function showed a small loop. It
-                loaded a byte at a time from a buffer, XOR'd it against a constant, and
-                then compared the result to the user input character by character. So the
-                real password wasn't stored anywhere — it was being reconstructed at
-                runtime from <code>'A' ^ 0x1A, 'B' ^ 0x2B, ...</code>.
-            </p>
-
-            <p>
-                I wrote a small Python script to undo the XOR using the constants I read
-                out of <code>gdb</code>. The first attempt spit out gibberish because I'd
-                misread one of the offsets — a fun reminder that one wrong byte and
-                everything downstream is wrong. After fixing it, the password dropped out
-                clean. Typed it into the binary, got my "yay", and sat there grinning at
-                the terminal for way too long.
-            </p>
-
-            <p>
-                What I took away from this one: don't trust the strings output, learn to
-                read the disassembly one instruction at a time, and always double-check
-                the offset before you script the solution. Next one I want to do is a
-                little harder — something with anti-debugging checks. We'll see how that
-                goes.
+                One of the things that attracted me to cybersecurity in the first place was the idea of 
+                understanding how computers actually work. And C forces you to think about that. You start
+                dealing with memory, pointers, addresses, data types, compilation, the stack and the heap,
+             and eventually the relationship between your program and the operating system. These aren't just
+              random concepts you learn for an exam. They help you understand what a computer is actually doing when your program runs.
             </p>
         </article>
 
