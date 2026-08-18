@@ -151,8 +151,8 @@ body {
 
 /* ---------- avatar / pfp ---------- */
 .avatar {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 28px;
     border-radius: 50%;
     overflow: hidden;
@@ -164,19 +164,21 @@ body {
 .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+
+    object-fit: cover;
+    object-position: center top;
     transition: filter var(--transition), opacity var(--transition),
                 transform var(--transition);
 }
-[data-theme="dark"] .avatar img {
-    filter: brightness(0) saturate(100%)
-            drop-shadow(0 0 6px rgba(239, 68, 68, 0.55))
-            drop-shadow(0 0 14px rgba(239, 68, 68, 0.25));
-    opacity: 0.92;
-    transform: scale(1.02);
+
+[data-theme="dark"] .avatar {
+    box-shadow:
+        0 0 0 1px var(--rule),
+        0 0 0 4px var(--avatar-ring),
+        0 0 22px rgba(239, 68, 68, 0.35);
 }
 
-[data-theme="light"] .avatar:hover img {
+.avatar:hover img {
     transform: scale(1.04);
 }
 
