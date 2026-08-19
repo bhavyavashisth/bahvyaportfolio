@@ -34,19 +34,19 @@
 
         <article class="post-body">
             <p>
-                I've been spending evenings on a tiny crackme binary I found on a public
-                CTF archive. Nothing fancy just a 4 KB stripped ELF that asks for a
-                password and either prints "nope" or "yay". The whole thing took me three
-                nights and a lot of <code>objdump -d</code>. This is a short write-up of
+                I have been working on a small crackme program that I came across
+                in a public CTF archive. Not a big deal, just a 4KB stripped ELF that
+                requires a password, which would either print "nope" or "yay". It took me three
+                nights and a lot of <code>objdump -d</code>. This is a short write up of
                 what I actually did, mostly so I don't forget.
             </p>
 
             <p>
-                First thing I tried was the obvious — run it, type the word "password",
-                watch it fail, then poke at the strings output. There was a
+                I began with the obvious: ran it, entered the word "password",
+                saw that it failed to work, and checked out the strings output. There was a
                 <code>strcmp</code> reference but the comparison string wasn't sitting in
-                <code>.rodata</code> like I expected, which was my first hint that
-                something was being built on the stack.
+                <code>.rodata</code> as I had expected, which was my first clue that
+                 something was being constructed onto the stack.
             </p>
 
             <p>
@@ -67,11 +67,10 @@
             </p>
 
             <p>
-                What I took away from this one: don't trust the strings output, learn to
-                read the disassembly one instruction at a time, and always double-check
-                the offset before you script the solution. Next one I want to do is a
-                little harder — something with anti-debugging checks. We'll see how that
-                goes.
+                What I learned from this exercise: do not rely on the strings output, get
+                  used to reading the disassembly line by line, and make sure to check
+                  your offsets before scripting the solution. The next exercise that I plan to
+                  work on will be a bit more difficult, involving some anti-debugging techniques.
             </p>
         </article>
 
