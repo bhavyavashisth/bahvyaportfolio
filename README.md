@@ -2,15 +2,15 @@
 This is my personal website where you can know about things about me and also we couldn't forgot the blogs.
 
 # The Stack:
-- **Language Used
+- **Languages Used:**
 - HTML
 - CSS
 - JS
-- **Fonts
+- **Fonts**
 - Playfair Display
 - Inter
 
-# features you'll actually notice
+# Features you'll actually notice
 Dark mode + Light mode button on top-right. 
 Live IST Clock on homepage.
 Hover micro-animations on every link,card and button.
