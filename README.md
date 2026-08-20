@@ -11,11 +11,11 @@ This is my personal website where you can know more about things about me and al
 - Inter
 
 # Features you'll actually notice
-Dark mode + Light mode button on top-right. 
-Live IST Clock on homepage.
-Hover micro-animations on every link,card and button.
-A soft red glow in the top-left corner.
-Mobile friendly.
+- Dark mode + Light mode button on top-right. 
+- Live IST Clock on homepage.
+- Hover micro-animations on every link,card and button.
+- A soft red glow in the top-left corner.
+- Mobile friendly.
 
 # NOTE:
 - It's my personal website, so… do whatever you like with the code? I learned everything from StackOverflow, blog posts, and open-source code from other people.
