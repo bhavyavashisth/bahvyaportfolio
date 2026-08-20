@@ -1,6 +1,6 @@
 # Bhavya's Portfolio
 This is my personal website where you can know about things about me and also we couldn't forgot the blogs.
-![Site Preview](assets/preview.mov) 
+![Site Preview](assets/preview.jpg) 
 # The Stack:
 - **Languages Used:**
 - HTML
