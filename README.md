@@ -18,4 +18,4 @@ A soft red glow in the top-left corner.
 Mobile friendly.
 
 # NOTE:
-- It's my personal website, so… do whatever you like with the code? I learned everything from StackOverflow, blog posts, and open-source code from other people. Pay it forward.
+- It's my personal website, so… do whatever you like with the code? I learned everything from StackOverflow, blog posts, and open-source code from other people.
