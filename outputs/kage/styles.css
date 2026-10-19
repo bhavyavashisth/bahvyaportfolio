@@ -85,7 +85,7 @@ main { position: relative; z-index: 3; }
 .hero { justify-content: center; padding-top: 18vh; }
 .hero .section-index { top: 96px; }
 .hero__copy { width: min(780px, 76vw); position: relative; z-index: 2; }
-.hero__title { font-size: clamp(100px, 14vw, 210px); line-height: .7; margin-left: -.035em; }
+.hero__title { font-size: clamp(88px, 11vw, 170px); line-height: .7; margin-left: -.035em; }
 .hero__title .word-line { padding-bottom: .16em; }
 .hero__role { margin: 34px 0 0 7px; color: #e1ad78; font-size: 10px; }
 .hero__statement { margin: 19px 0 0 7px; max-width: 355px; color: #d4ccbd; font-size: clamp(14px, 1.45vw, 18px); font-family: "Yu Mincho", Georgia, serif; }
