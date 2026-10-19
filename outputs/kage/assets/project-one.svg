@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="Vermilion moon over a mountain pass">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#111e26"/><stop offset="1" stop-color="#252326"/></linearGradient><radialGradient id="moon"><stop stop-color="#f19b65"/><stop offset=".7" stop-color="#c9543f"/><stop offset="1" stop-color="#8c322f"/></radialGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#3b4140"/><stop offset="1" stop-color="#10191b"/></linearGradient></defs>
+  <rect width="960" height="640" fill="url(#sky)"/><circle cx="645" cy="205" r="129" fill="url(#moon)" opacity=".94"/><circle cx="645" cy="205" r="172" fill="#dc7350" opacity=".08"/>
+  <path d="M0 414 110 348l93 54 151-145 137 113 121-127 111 104 91-80 146 103v230H0z" fill="#222e31"/><path d="M0 465 147 374l119 87 183-118 92 63 171-140 148 147 100-52v239H0z" fill="url(#hill)"/>
+  <path d="M0 529c143-50 243-53 364-9 120 44 205-25 316-31 97-6 172 47 280 29v122H0z" fill="#0d1619"/>
+  <g fill="#111819"><path d="M94 506V312h15v194zm-37-175 45-59 45 59zm-18 49 55-68 56 68zM816 510V329h13v181zm-38-164 44-63 45 63zm-14 48 57-74 57 74z"/><path d="M329 421h230v17H329zm-21 0 21-9v31l-21-10zm252 0-21-9v31l21-10zm-217 18v66h-9v-66zm81 0v66h-9v-66zm82 0v66h-9v-66z"/></g>
+  <path d="M0 584h960" stroke="#df8c5f" stroke-opacity=".35"/><text x="48" y="82" fill="#d9cbb5" font-family="serif" font-size="17" letter-spacing="7">STUDY 01 · THE PASS</text><text x="795" y="588" fill="#c4aa8f" font-family="sans-serif" font-size="12" letter-spacing="4">NIGHT / 01</text>
+</svg>

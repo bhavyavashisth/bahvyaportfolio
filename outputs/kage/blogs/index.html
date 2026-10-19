@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1115">
+  <meta name="description" content="Kage field notes: personal stories, small programming lessons, and notes from the practice.">
+  <title>Blogs — Kage</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230a1115'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='22' fill='%23d9a36c'%3E影%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./blogs.css">
+  <script type="module" src="../app.js"></script>
+</head>
+<body class="blogs-site">
+  <a class="skip-link" href="#main">Skip to blogs</a>
+  <div class="world" aria-hidden="true">
+    <canvas id="world-canvas"></canvas><div class="world-wash"></div><div class="film-grain"></div><div class="vignette"></div>
+    <div class="foreground" id="foreground"><img class="fg-layer fg-back" alt="" decoding="async"><img class="fg-layer fg-mid" alt="" decoding="async"><img class="fg-layer fg-front" alt="" decoding="async"><img class="fg-layer fg-accent" alt="" decoding="async"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="../index.html" aria-label="Kage home"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a>
+    <div class="header-meta">FIELD NOTES <span>·</span> 2026</div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-toggle__label">MENU</span><span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span></button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+      <a href="../index.html#about">ABOUT</a><a href="../index.html#projects">SELECTED WORK</a><a href="./index.html" aria-current="page">BLOGS</a><a href="./writing-room.html">WRITING ROOM <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <nav class="chapter-rail" aria-label="Blog chapters">
+    <a href="#top" class="chapter-rail__item is-active" aria-label="Chapter 01: The journal" aria-current="location"><span>01</span><i></i></a>
+    <a href="#blog-list" class="chapter-rail__item" aria-label="Chapter 02: Field notes"><span>02</span><i></i></a>
+    <a href="#writing-room" class="chapter-rail__item" aria-label="Chapter 03: Writing room"><span>03</span><i></i></a>
+    <span class="chapter-rail__line" aria-hidden="true"></span>
+  </nav>
+
+  <main id="main" class="blogs-main">
+    <section class="chapter blog-hero" id="top" data-shot="0" aria-labelledby="blogs-title">
+      <div class="section-index"><span>01</span><span class="index-rule"></span><span>THE JOURNAL</span></div>
+      <div class="blog-hero__copy">
+        <p class="eyebrow reveal">PERSONAL NOTES <span>／</span> IDEAS IN PROGRESS</p>
+        <h1 class="blog-display reveal" id="blogs-title">Stories in<br>the quiet<span class="period">.</span></h1>
+        <p class="blog-hero__deck reveal">Small observations, lessons from making, and a little of the person behind the work.</p>
+        <a class="text-link reveal" href="#blog-list">EXPLORE THE NOTES <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="blog-hero__seal" aria-hidden="true"><span>記</span><i></i><small>NOTES<br>FROM KAGE</small></div>
+      <div class="hero__coordinates" aria-hidden="true"><span>35°00′N</span><span>135°46′E</span><i></i><span>FIELD NOTES</span></div>
+    </section>
+
+    <section class="chapter blog-list-section" id="blog-list" data-shot="1" aria-labelledby="blog-list-title">
+      <div class="section-index"><span>02</span><span class="index-rule"></span><span>FIELD NOTES</span></div>
+      <div class="blog-list-heading"><div><p class="eyebrow reveal">A FEW THINGS TO READ <span>／</span> TAKE YOUR TIME</p><h2 class="blog-list-title reveal" id="blog-list-title">From the journal<span class="period">.</span></h2></div><span class="blog-count">02 <i>NOTES</i></span></div>
+      <ol class="blog-card-list" aria-label="All blog posts">
+        <li class="blog-card blog-card--about reveal">
+          <a href="./about-me.html" aria-label="Read About Me">
+            <span class="blog-card__number">01</span><span class="blog-card__symbol" aria-hidden="true">人</span>
+            <span class="blog-card__copy"><span class="blog-card__meta">A PERSONAL NOTE <i>·</i> 3 MIN READ</span><strong>About Me</strong><span class="blog-card__excerpt">A small introduction to the person behind this portfolio, the path so far, and what I hope to make next.</span></span>
+            <span class="blog-card__action">READ THE STORY <i aria-hidden="true">↗</i></span>
+          </a>
+        </li>
+        <li class="blog-card blog-card--code reveal">
+          <a href="./compiling-a-small-bug-in-c.html" aria-label="Read Compiling a Small Bug in C">
+            <span class="blog-card__number">02</span><span class="blog-card__symbol" aria-hidden="true">{ }</span>
+            <span class="blog-card__copy"><span class="blog-card__meta">C / FIRST STEPS <i>·</i> 4 MIN READ</span><strong>Compiling a Small Bug in C</strong><span class="blog-card__excerpt">A missing semicolon, a helpful compiler, and a calm way to make the smallest useful fix.</span></span>
+            <span class="blog-card__action">READ THE STORY <i aria-hidden="true">↗</i></span>
+          </a>
+        </li>
+      </ol>
+      <p class="blog-list-note reveal"><span aria-hidden="true">✳</span> Each note opens as its own story. More will find their way here in time.</p>
+    </section>
+
+    <section class="chapter writing-invite" id="writing-room" data-shot="2" aria-labelledby="writing-invite-title">
+      <div class="section-index"><span>03</span><span class="index-rule"></span><span>THE WRITING ROOM</span></div>
+      <div class="writing-invite__content"><p class="eyebrow reveal">FOR THE AUTHOR <span>／</span> A QUIET DESK</p><h2 class="blog-display reveal" id="writing-invite-title">Begin with<br>a blank page<span class="period">.</span></h2><p class="writing-invite__text reveal">The writing room keeps drafts in this browser. Published stories stay read-only for visitors.</p><a class="text-link reveal" href="./writing-room.html">ENTER THE WRITING ROOM <span aria-hidden="true">↗</span></a></div>
+      <span class="writing-invite__kanji" aria-hidden="true">文</span>
+    </section>
+
+    <footer class="blogs-footer"><a class="wordmark wordmark--footer" href="../index.html"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a><span>© 2026 YOUR NAME · ALL RIGHTS RESERVED</span><a href="../index.html#top" class="back-top">RETURN TO PORTFOLIO <span aria-hidden="true">↗</span></a></footer>
+  </main>
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+  <div class="sr-only" id="scene-status" aria-live="polite">3D environment loaded.</div>
+</body>
+</html>

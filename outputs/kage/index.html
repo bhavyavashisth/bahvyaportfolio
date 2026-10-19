@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1115">
+  <meta name="description" content="Kage — a cinematic personal portfolio in a Kyoto-inspired mountain world.">
+  <title>Kage — Personal Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230a1115'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='22' fill='%23d9a36c'%3E影%3C/text%3E%3C/svg%3E">
+  <link rel="modulepreload" href="./vendor/three.core.js">
+  <link rel="preload" href="./vendor/three.module.js" as="script" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="world" aria-hidden="true">
+    <canvas id="world-canvas"></canvas>
+    <div class="world-wash"></div>
+    <div class="film-grain"></div>
+    <div class="vignette"></div>
+    <div class="world-fallback" id="world-fallback">The 3D scene is unavailable in this browser. The complete portfolio remains below.</div>
+    <div class="foreground" id="foreground" aria-hidden="true">
+      <img class="fg-layer fg-back" alt="" decoding="async">
+      <img class="fg-layer fg-mid" alt="" decoding="async">
+      <img class="fg-layer fg-front" alt="" decoding="async">
+      <img class="fg-layer fg-accent" alt="" decoding="async">
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Kage home"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a>
+    <div class="header-meta">DIGITAL PORTFOLIO <span>·</span> 2026</div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle__label">MENU</span><span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+      <a href="#about">ABOUT</a><a href="#projects">SELECTED WORK</a><a href="#craft">CRAFT</a><a href="./blogs/index.html">BLOGS</a><a href="#contact">CONTACT <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <nav class="chapter-rail" aria-label="Portfolio chapters">
+    <a href="#top" class="chapter-rail__item is-active" aria-label="Chapter 01: Arrival" aria-current="location"><span>01</span><i></i></a>
+    <a href="#about" class="chapter-rail__item" aria-label="Chapter 02: Threshold"><span>02</span><i></i></a>
+    <a href="#projects" class="chapter-rail__item" aria-label="Chapter 03: Still gardens"><span>03</span><i></i></a>
+    <a href="#craft" class="chapter-rail__item" aria-label="Chapter 04: The practice"><span>04</span><i></i></a>
+    <a href="#contact" class="chapter-rail__item" aria-label="Chapter 05: Afterlight"><span>05</span><i></i></a>
+    <a href="#manifesto" class="chapter-rail__item" aria-label="Chapter 06: A final note"><span>06</span><i></i></a>
+    <span class="chapter-rail__line" aria-hidden="true"></span>
+  </nav>
+
+  <main id="main">
+    <section class="chapter hero" id="top" data-shot="0" aria-labelledby="hero-title">
+      <div class="section-index"><span>01</span><span class="index-rule"></span><span>ARRIVAL</span></div>
+      <div class="hero__copy">
+        <p class="eyebrow reveal">A PERSONAL PORTFOLIO <span>—</span> INSPIRED BY KYOTO</p>
+        <h1 class="hero__title" id="hero-title"><span class="word-line"><span>YOUR</span></span><span class="word-line"><span>NAME<span class="period">.</span></span></span></h1>
+        <p class="hero__role reveal">[YOUR ROLE / TITLE]</p>
+        <p class="hero__statement reveal">Replace with a short signature statement that sounds like you.</p>
+        <a class="text-link hero__link reveal" href="#about">ENTER THE WORLD <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero__aside" aria-hidden="true"><span class="jp-display">影</span><span class="jp-caption">KAGE / SHADOW</span></div>
+      <div class="hero__coordinates" aria-hidden="true"><span>35°00′N</span><span>135°46′E</span><i></i><span>BEYOND THE GATE</span></div>
+      <span class="scroll-cue" aria-hidden="true"><i></i>SCROLL TO EXPLORE</span>
+    </section>
+
+    <section class="chapter threshold" id="about" data-shot="1" aria-labelledby="about-title">
+      <div class="section-index"><span>02</span><span class="index-rule"></span><span>THRESHOLD</span></div>
+      <div class="editorial editorial--about">
+        <p class="eyebrow reveal">A LITTLE CONTEXT <span>／</span> THE PERSON BEHIND THE WORK</p>
+        <h2 class="display-heading" id="about-title"><span class="word-line"><span>BEFORE</span></span><span class="word-line"><span>THE GATE</span></span></h2>
+        <div class="about-grid">
+          <p class="lead-copy reveal">Replace this paragraph with a short biography: where you began, what keeps you curious, and how you approach your work.</p>
+          <div class="about-detail reveal"><span class="micro-label">IN A FEW WORDS</span><p>[PERSONALITY / VALUES / INTERESTS]</p><span class="about-detail__rule"></span><p class="about-detail__small">Use this space for the turns in your journey, the people or places that shaped you, and what you care about making.</p></div>
+        </div>
+      </div>
+      <div class="vertical-note" aria-hidden="true">心を込めて <span>MADE WITH INTENTION</span></div>
+    </section>
+
+    <section class="chapter gardens" id="projects" data-shot="2" aria-labelledby="projects-title">
+      <div class="section-index"><span>03</span><span class="index-rule"></span><span>STILL GARDENS</span></div>
+      <div class="chapter-heading">
+        <div><p class="eyebrow reveal">SELECTED PROJECTS <span>／</span> ADD YEARS</p><h2 class="display-heading" id="projects-title"><span class="word-line"><span>SELECTED</span></span><span class="word-line"><span>WORK<span class="period">.</span></span></span></h2></div>
+        <p class="chapter-heading__note reveal">A small selection of projects.<br>Replace every field with verified details.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <a class="project-card__image" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Open repository link for Project One placeholder">
+            <img src="./assets/project-one.svg" alt="A vermilion moon over a quiet mountain pass" loading="lazy">
+            <span class="image-number">01 / 03</span><span class="image-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-card__meta"><span>PROJECT ONE · REPLACE</span><span>20XX</span></div>
+          <h3>PROJECT NAME ONE</h3>
+          <p>Replace with a clear one-sentence description and the verified result.</p>
+          <div class="project-card__foot"><span>[TOOLS / TECHNOLOGIES]</span><a href="https://github.com/" target="_blank" rel="noreferrer">REPLACE REPO URL <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card reveal">
+          <a class="project-card__image" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Open repository link for Project Two placeholder">
+            <img src="./assets/project-two.svg" alt="A field of lanterns reflected in a still pool" loading="lazy">
+            <span class="image-number">02 / 03</span><span class="image-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-card__meta"><span>PROJECT TWO · REPLACE</span><span>20XX</span></div>
+          <h3>PROJECT NAME TWO</h3>
+          <p>Replace with the problem, your contribution, and a real outcome.</p>
+          <div class="project-card__foot"><span>[TOOLS / TECHNOLOGIES]</span><a href="https://github.com/" target="_blank" rel="noreferrer">REPLACE REPO URL <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card reveal">
+          <a class="project-card__image" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Open repository link for Project Three placeholder">
+            <img src="./assets/project-three.svg" alt="An abstract study of the Kage mountain landscape" loading="lazy">
+            <span class="image-number">03 / 03</span><span class="image-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-card__meta"><span>PROJECT THREE · REPLACE</span><span>20XX</span></div>
+          <h3>PROJECT NAME THREE</h3>
+          <p>Replace with a concise project story and a factual impact statement.</p>
+          <div class="project-card__foot"><span>[TOOLS / TECHNOLOGIES]</span><a href="https://github.com/" target="_blank" rel="noreferrer">REPLACE REPO URL <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter craft" id="craft" data-shot="3" aria-labelledby="craft-title">
+      <div class="section-index"><span>04</span><span class="index-rule"></span><span>THE PRACTICE</span></div>
+      <div class="chapter-heading craft__heading">
+        <div><p class="eyebrow reveal">HOW IT COMES TOGETHER <span>／</span> SKILLS & EXPERIENCE</p><h2 class="display-heading" id="craft-title"><span class="word-line"><span>THOUGHT</span></span><span class="word-line"><span>INTO FORM<span class="period">.</span></span></span></h2></div>
+        <p class="chapter-heading__note reveal">Curiosity at the beginning.<br>Care in every detail.</p>
+      </div>
+      <div class="craft-grid">
+        <div class="craft-column reveal"><span class="micro-label">01 / SKILLS & TOOLS</span><h3>THE MATERIALS</h3><ul class="skill-list"><li><span>[SKILL CATEGORY 01]</span><span>[ADD SKILLS]</span></li><li><span>[SKILL CATEGORY 02]</span><span>[ADD SKILLS]</span></li><li><span>[TOOLS / METHODS]</span><span>[ADD TOOLS]</span></li><li><span>[WORKING STYLE]</span><span>[ADD STRENGTHS]</span></li></ul></div>
+        <div class="craft-column craft-column--timeline reveal"><span class="micro-label">02 / EXPERIENCE & EDUCATION</span><h3>THE PATH</h3><div class="timeline-entry"><span>20XX — NOW</span><div><strong>[ROLE / ORGANIZATION]</strong><p>Replace with a concise description of responsibilities and contributions.</p></div></div><div class="timeline-entry"><span>20XX — 20XX</span><div><strong>[EDUCATION / ACHIEVEMENT]</strong><p>Replace with a verified qualification, award, or milestone.</p></div></div><a class="text-link craft__resume" href="mailto:hello@your-domain.com">ADD RESUME OR CV LINK <span aria-hidden="true">↗</span></a></div>
+        <div class="craft-stamp" aria-hidden="true"><span>技</span><i></i><small>CRAFT<br>OVER NOISE</small></div>
+      </div>
+    </section>
+
+    <section class="chapter afterlight" id="contact" data-shot="4" aria-labelledby="contact-title">
+      <div class="section-index"><span>05</span><span class="index-rule"></span><span>AFTERLIGHT</span></div>
+      <div class="contact-layout">
+        <div class="contact-copy"><p class="eyebrow reveal">THE NEXT CHAPTER <span>／</span> SAY HELLO</p><h2 class="display-heading" id="contact-title"><span class="word-line"><span>LET'S</span></span><span class="word-line"><span>BEGIN<span class="period">.</span></span></span></h2><p class="contact-intro reveal">Have a thoughtful project in mind?<br>Replace this line with your own invitation.</p><a class="contact-email reveal" href="mailto:hello@your-domain.com">HELLO@YOUR-DOMAIN.COM <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-orbit" aria-hidden="true"><span class="contact-orbit__moon"></span><span class="contact-orbit__ring contact-orbit__ring--one"></span><span class="contact-orbit__ring contact-orbit__ring--two"></span><span class="contact-orbit__label">A NEW<br>HORIZON</span></div>
+      </div>
+      <div class="social-row reveal"><span class="micro-label">FIND ME ELSEWHERE</span><div><a href="https://github.com/" target="_blank" rel="noreferrer">GITHUB <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN <span aria-hidden="true">↗</span></a><a href="mailto:hello@your-domain.com">EMAIL <span aria-hidden="true">↗</span></a></div><span class="social-row__hint">REPLACE PROFILE LINKS</span></div>
+    </section>
+
+    <footer class="chapter manifesto" id="manifesto" data-shot="5" aria-labelledby="manifesto-title">
+      <div class="section-index"><span>06</span><span class="index-rule"></span><span>A FINAL NOTE</span></div>
+      <div class="manifesto__center"><p class="eyebrow reveal">A PERSONAL PHILOSOPHY <span>／</span> REPLACE THIS LINE</p><h2 id="manifesto-title" class="manifesto__statement reveal">Make the unseen<br>matter.</h2><span class="manifesto__signature reveal">YOUR NAME <span>—</span> SIGNATURE</span></div>
+      <div class="manifesto__bottom"><a class="wordmark wordmark--footer" href="#top"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a><span>© 2026 YOUR NAME · ALL RIGHTS RESERVED</span><a href="./blogs/index.html" class="back-top">BLOGS <span aria-hidden="true">↗</span></a><a href="#top" class="back-top">BACK TO THE BEGINNING <span aria-hidden="true">↑</span></a></div>
+    </footer>
+  </main>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+  <div class="sr-only" id="scene-status" aria-live="polite">3D environment loaded.</div>
+</body>
+</html>

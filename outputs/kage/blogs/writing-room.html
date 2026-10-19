@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1115">
+  <meta name="description" content="The Kage author writing room. Draft locally in this browser and export your writing as Markdown.">
+  <title>Writing Room — Kage</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230a1115'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='22' fill='%23d9a36c'%3E影%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../writer.css">
+  <link rel="stylesheet" href="./blogs.css">
+  <script type="module" src="../app.js"></script>
+  <script src="../writer.js" defer></script>
+</head>
+<body class="writer-page">
+  <a class="skip-link" href="#main">Skip to writing room</a>
+  <div class="world writer-world" aria-hidden="true">
+    <canvas id="world-canvas"></canvas><div class="world-wash"></div><div class="film-grain"></div><div class="vignette"></div>
+    <div class="foreground" id="foreground"><img class="fg-layer fg-back" alt="" decoding="async"><img class="fg-layer fg-mid" alt="" decoding="async"><img class="fg-layer fg-front" alt="" decoding="async"><img class="fg-layer fg-accent" alt="" decoding="async"></div>
+  </div>
+
+  <header class="site-header writer-header">
+    <a class="wordmark" href="../index.html" aria-label="Kage portfolio home"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a>
+    <div class="header-meta">AUTHOR DESK <span>·</span> LOCAL DRAFTS</div>
+    <nav class="primary-nav writer-nav" aria-label="Main navigation">
+      <a href="../index.html">PORTFOLIO</a>
+      <a href="./index.html">ALL BLOGS</a>
+    </nav>
+  </header>
+
+  <main class="writer-shell" id="main">
+    <section class="writer-intro" aria-labelledby="writer-title">
+      <div class="section-index"><span>01</span><span class="index-rule"></span><span>AUTHOR DESK</span></div>
+      <p class="eyebrow">A LOCAL DRAFT SPACE <span>／</span> KAGE WRITING ROOM</p>
+      <h1 class="writer-title" id="writer-title">Write in the<br>quiet<span class="period">.</span></h1>
+      <p class="writer-deck">Make drafts here, shape them in the live preview, and export them when they’re ready.</p>
+    </section>
+    <p class="author-note"><span aria-hidden="true">✳</span><span><strong>AUTHOR DESK</strong> — Drafts save only in this browser. Readers can’t change your published blog posts from here. Export a Markdown file to keep or publish a draft.</span></p>
+
+    <section class="writer-workspace" id="draft-editor" aria-label="Blog draft editor">
+      <div class="draft-toolbar">
+        <div class="draft-picker">
+          <label class="micro-label" for="draft-select">YOUR DRAFTS</label>
+          <select id="draft-select" aria-label="Choose a saved draft"></select>
+          <button class="quiet-button" id="new-draft" type="button">＋ NEW DRAFT</button>
+        </div>
+        <div class="draft-actions">
+          <span class="save-status" id="save-status" role="status" aria-live="polite"><span class="save-dot"></span> SAVED IN THIS BROWSER</span>
+          <button class="quiet-button" id="delete-draft" type="button">DELETE</button>
+          <button class="export-button" id="export-draft" type="button"><span>EXPORT MARKDOWN</span><span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+
+      <div class="writer-columns">
+        <form class="editor-panel" id="draft-form" autocomplete="off" onsubmit="return false">
+          <div class="field field--title">
+            <label class="micro-label" for="post-title">TITLE</label>
+            <input id="post-title" name="title" type="text" maxlength="120" placeholder="A thought worth keeping" spellcheck="true">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="micro-label" for="post-slug">SLUG</label>
+              <input id="post-slug" name="slug" type="text" maxlength="140" placeholder="your-story-title">
+            </div>
+            <div class="field">
+              <label class="micro-label" for="post-tags">TAGS <span class="label-hint">SEPARATE WITH COMMAS</span></label>
+              <input id="post-tags" name="tags" type="text" maxlength="160" placeholder="Notes, Process">
+            </div>
+          </div>
+          <div class="field">
+            <label class="micro-label" for="post-excerpt">SHORT INTRO</label>
+            <textarea id="post-excerpt" name="excerpt" rows="2" maxlength="240" placeholder="A line to invite someone into the story…"></textarea>
+          </div>
+          <div class="field field--body">
+            <div class="body-label-row"><label class="micro-label" for="post-body">YOUR STORY</label><span class="format-hint">MARKDOWN SUPPORTED</span></div>
+            <textarea id="post-body" name="body" spellcheck="true" placeholder="# Begin anywhere&#10;&#10;Write your story here. Use **bold**, *italics*, `code`, headings, lists, quotes, and links.&#10;&#10;- One thought at a time&#10;- Leave room to breathe"></textarea>
+            <div class="editor-foot"><span>LOCAL DRAFT</span><span id="word-count">0 WORDS</span></div>
+          </div>
+        </form>
+
+        <aside class="preview-panel" aria-label="Live preview">
+          <div class="preview-top"><span class="micro-label">A FIRST LOOK</span><span class="preview-mark" aria-hidden="true">影</span></div>
+          <article class="post-preview" id="post-preview">
+            <p class="preview-meta" id="preview-meta">JOURNAL <span>／</span> YOUR NAME</p>
+            <h2 class="preview-title" id="preview-title">A thought worth keeping</h2>
+            <p class="preview-excerpt" id="preview-excerpt">Your opening line will find its place here.</p>
+            <div class="preview-rule"><span></span><i></i><span></span></div>
+            <div class="preview-body" id="preview-body"><p>Your story will unfold here as you write.</p></div>
+            <div class="preview-tags" id="preview-tags"></div>
+          </article>
+        </aside>
+      </div>
+      <p class="storage-note"><span aria-hidden="true">✳</span> Drafts are saved only in this browser. Export a Markdown file to keep a copy or publish elsewhere.</p>
+    </section>
+
+    <footer class="writer-footer">
+      <a class="wordmark wordmark--footer" href="../index.html"><span class="wordmark__mark">影</span><span>KAGE<span class="wordmark__period">.</span></span></a>
+      <span>WRITE WITH INTENTION · © 2026</span>
+      <a class="back-top" href="./index.html">RETURN TO BLOGS <span aria-hidden="true">↗</span></a>
+    </footer>
+  </main>
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+  <div class="sr-only" id="scene-status" aria-live="polite">3D environment loaded.</div>
+</body>
+</html>
