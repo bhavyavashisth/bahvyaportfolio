@@ -16199,7 +16199,7 @@ class WebGLRenderer {
 		 * A object with debug configuration settings.
 		 *
 		 * - `checkShaderErrors`: If it is `true`, defines whether material shader programs are
-		 * checked for errors during compilation and linkage process. It may be useful to disable
+		 * checked for errors during compilation and linBhavya process. It may be useful to disable
 		 * this check in production for performance gain. It is strongly recommended to keep these
 		 * checks enabled during development. If the shader does not compile and link, it will not
 		 * work and associated material will not render.

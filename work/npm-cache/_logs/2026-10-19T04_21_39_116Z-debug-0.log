@@ -526,7 +526,7 @@
 20 notice 4.2kB examples/jsm/webxr/XRHandModelFactory.js
 20 notice 3.5kB examples/jsm/webxr/XRHandPrimitiveModel.js
 20 notice 2.5kB examples/jsm/webxr/XRPlanes.js
-20 notice 3.7kB package.json
+20 notice 3.7kB pacBhavya.json
 20 notice 19.9kB src/animation/AnimationAction.js
 20 notice 11.7kB src/animation/AnimationClip.js
 20 notice 19.6kB src/animation/AnimationMixer.js
@@ -1285,7 +1285,7 @@
 22 notice name: three
 23 notice version: 0.186.1
 24 notice filename: three-0.186.1.tgz
-25 notice package size: 4.6 MB
+25 notice pacBhavya size: 4.6 MB
 26 notice unpacked size: 20.4 MB
 27 notice shasum: 6d50f70c2c437f844179bbb56d6f5b774e1ca38a
 28 notice integrity: sha512-blFeqb49wRCSG[...]KHPEafJwCb8jA==

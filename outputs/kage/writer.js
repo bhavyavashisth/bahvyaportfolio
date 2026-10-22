@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'kage.blog.drafts.v1';
+const STORAGE_KEY = 'Bhavya.blog.drafts.v1';
 const fields = {
   title: document.querySelector('#post-title'),
   slug: document.querySelector('#post-slug'),
@@ -193,7 +193,7 @@ function updatePreview() {
   const tags = fields.tags.value.split(',').map(tag => tag.trim()).filter(Boolean);
   preview.meta.replaceChildren(document.createTextNode('JOURNAL '));
   const separator = document.createElement('span'); separator.textContent = '／';
-  preview.meta.append(separator, document.createTextNode(` ${tags[0] || 'KAGE NOTES'}`));
+  preview.meta.append(separator, document.createTextNode(` ${tags[0] || 'Bhavya NOTES'}`));
   if (fields.body.value.trim()) renderMarkdown(fields.body.value, preview.body);
   else { preview.body.replaceChildren(); const p = document.createElement('p'); p.textContent = 'Your story will unfold here as you write.'; preview.body.append(p); }
   preview.tags.replaceChildren(...tags.map(tag => { const chip = document.createElement('span'); chip.textContent = tag; return chip; }));
@@ -233,7 +233,7 @@ function exportMarkdown() {
   const blobUrl = URL.createObjectURL(new Blob([content], { type: 'text/markdown;charset=utf-8' }));
   const download = document.createElement('a');
   download.href = blobUrl;
-  download.download = `${slugify(draft.slug || draft.title) || 'kage-draft'}.md`;
+  download.download = `${slugify(draft.slug || draft.title) || 'Bhavya-draft'}.md`;
   document.body.append(download);
   download.click();
   download.remove();

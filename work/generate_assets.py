@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFilter
 import math, random, os
 
-OUT = os.path.abspath('outputs/kage/assets/foreground')
+OUT = os.path.abspath('outputs/Bhavya/assets/foreground')
 os.makedirs(OUT, exist_ok=True)
 W, H, S = 1600, 580, 1
 random.seed(17)

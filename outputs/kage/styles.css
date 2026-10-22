@@ -169,7 +169,7 @@ main { position: relative; z-index: 3; }
 .social-row__hint { margin-left: auto; color: #827e75; font-size: 7px; }
 
 .manifesto { min-height: 88svh; padding-top: 18vh; padding-bottom: 28px; justify-content: center; }
-.manifesto::before { content: "影"; position: absolute; z-index: -1; top: 17%; left: 50%; transform: translateX(-50%); color: rgba(195,178,146,.045); font-family: "Yu Mincho", Georgia, serif; font-size: min(62vw, 750px); line-height: 1; pointer-events: none; }
+.manifesto::before { content: "壮大"; position: absolute; z-index: -1; top: 17%; left: 50%; transform: translateX(-50%); color: rgba(195,178,146,.045); font-family: "Yu Mincho", Georgia, serif; font-size: min(62vw, 750px); line-height: 1; pointer-events: none; }
 .manifesto__center { text-align: center; margin: auto; padding: 40px 0 70px; }
 .manifesto__center .eyebrow { margin-bottom: 28px; }
 .manifesto__statement { margin: 0; color: #e8dfd0; font-family: "Yu Mincho", Georgia, serif; font-size: clamp(50px, 8.5vw, 126px); font-weight: 400; letter-spacing: -.04em; line-height: .98; }
